@@ -15,11 +15,20 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+
+            $table->string('pseudo');
+            $table->string('mdp');
+            $table->string('nom');
+            $table->string('prenom');
+            $table->unsignedTinyInteger('statut')
+                ->default(1);
+            $table->enum('civilite', ['m', 'f'])
+                ->default('m');
             $table->string('email')->unique();
-            $table->string('password');
             $table->rememberToken();
-            $table->timestamps();
+
+
+            $table->timestamps(); // creer un champ created_at et updated_at
         });
     }
 
