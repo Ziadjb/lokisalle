@@ -42,3 +42,4 @@ Route::get('/salle', function () {
 Route::get('/stats', function () {
     return view('stats');
 });
+
