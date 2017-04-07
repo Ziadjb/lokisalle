@@ -13,7 +13,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')  }}" />
-    <link rel="stylesheet" href="/css/monstyle.css" />
+    <link rel="stylesheet" href="{{ asset('css/monstyle.css') }}" />
 
     <!-- Custom CSS -->
     <style>
