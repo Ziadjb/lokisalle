@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
             $table->increments('id');
 
             $table->string('pseudo');
-            $table->string('mdp');
+            $table->string('password');
             $table->string('nom');
             $table->string('prenom');
             $table->unsignedTinyInteger('statut')
