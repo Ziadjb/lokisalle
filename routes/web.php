@@ -43,3 +43,8 @@ Route::get('/stats', function () {
     return view('stats');
 });
 
+
+Auth::routes();
+Route::get('/logout', 'Auth\LoginController@logout');
+
+Route::get('/home', 'HomeController@index');
