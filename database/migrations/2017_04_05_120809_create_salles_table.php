@@ -35,7 +35,7 @@ class CreateSallesTable extends Migration
             $table->string('adresse', 255)
                 ->nullable();
 
-            $table->unsignedInteger('cp')
+            $table->string('cp', 20)
                 ->nullable();
 
             $table->unsignedInteger('capacite')

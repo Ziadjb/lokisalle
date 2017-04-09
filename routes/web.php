@@ -11,6 +11,16 @@
 |
 */
 
+
+// Administration
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function() {
+
+    Route::get('salles', function(){
+        return view('admin.gestion.salle');
+    });
+
+} );
+
 Route::get('/', function () {
     return view('accueil');
 });
@@ -33,10 +43,6 @@ Route::get('/membre', function () {
 
 Route::get('/produit', function () {
     return view('produit');
-});
-
-Route::get('/salle', function () {
-    return view('salle');
 });
 
 Route::get('/stats', function () {
